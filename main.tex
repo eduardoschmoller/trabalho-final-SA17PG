@@ -1,72 +1,54 @@
-\documentclass{comjnl}
+\documentclass[pdflatex,sn-mathphys]{sn-jnl}
+\jyear{\year}
 
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{epstopdf}
+\usepackage{lipsum}
 
-
-%% These two lines are needed to get the correct paper size
-%% in TeX Live 2016
-\let\pdfpageheight\paperheight
-\let\pdfpagewidth\paperwidth
-
-%\copyrightyear{2009} \vol{00} \issue{0} \DOI{000}
+\raggedbottom
 
 \begin{document}
 
-\title[Modelling Bidders in Sequential Automated Auctions]{Modelling Bidders in Sequential Automated Auctions}
-\author{Kumaara Velan}
-\affiliation{Intelligent Systems and Networks Group, Department of
-Electrical and Electronic Engineering, Imperial College, London
-SW7 2BT, UK} \email{kumaara.velan@imperial.ac.uk}
+\title[Modelagem de planta industrial]{Modelagem de planta industrial}
 
-\shortauthors{K. Velan}
- 
-\received{00 January 2009}
-\revised{00 Month 2009}
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1]{\fnm{First} \sur{Author}}\email{First@gmail.com}
+
+\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\affil*[1]{\orgdiv{PPGEE}, \orgname{UTFPR}, \orgaddress{\street{Via do Conhecimento}, \city{Pato Branco}, \postcode{85503-390}, \state{PR}, \country{Brasil}}}
+
+\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+
+\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
 
 
-%\category{C.2}{Computer Communication Networks}{Computer Networks}
-%\category{C.4}{Performance of Systems}{Analytical Models}
-%\category{G.3}{Stochastic Processes}{Queueing Systems}
-%\terms{Internet Technologies, E-Commerce}
-\keywords{Automated Auctions; Analytical Models; Autonomic
-Systems; Internet Technologies; E-Commerce; Queueing Systems}
 
+\abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
 
-\begin{abstract}
-Auctions are mechanisms that formalise the rules with which
-automated trading schemes can be conducted, and in this paper we
-model the interaction of bidder and seller agents in sequential
-computerised auctions. We study the outcome of strategies that a
-designated ``special bidder'' (SB) may follow in the presence of a
-collection of other bidders in an English auction, under the
-assumption that the SB can make bids based on its observation of
-the ongoing auction as a collective system. In our model, bidding
-and sale events are continuous time random processes with discrete
-state-space, where the state-space represents the current value of
-the most recent bid. We obtain analytical solutions which allow
-the evaluation of measures of interest to the SB such as the
-probability of winning, the savings with respect to the maximum
-payable price in the event of a win, and the expected waiting time
-to win. We examine the effects of the SB's time to bid, and study
-how its decisions may be selected so as to optimise the SB's
-measures of interest.
-\end{abstract}
+\keywords{keyword1, Keyword2, Keyword3, Keyword4}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
 
 \maketitle
 
-%\input{capitulos/introducao.tex}
-%\input{capitulos/revisao_bibliografica.tex}
-%\input{capitulos/desenvolvimento.tex}
-%\input{capitulos/conclusao.tex}
+\input{capitulos/desenvolvimento.tex}
 
-\input{capitulos/exemplos.tex}
-
-\nocite{*}
-
-\bibliographystyle{compj}
-\bibliography{bibliografia}
-
+\bibliography{sn-bibliography}
 
 \end{document}
