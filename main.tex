@@ -7,47 +7,28 @@
 
 \begin{document}
 
-\title[Modelagem de planta industrial]{Modelagem de planta industrial}
+\title[Modelagem de processo industrial de manufatura]{Modelagem de processo industrial de manufatura}
 
-%%=============================================================%%
-%% Prefix	-> \pfx{Dr}
-%% GivenName	-> \fnm{Joergen W.}
-%% Particle	-> \spfx{van der} -> surname prefix
-%% FamilyName	-> \sur{Ploeg}
-%% Suffix	-> \sfx{IV}
-%% NatureName	-> \tanm{Poet Laureate} -> Title after name
-%% Degrees	-> \dgr{MSc, PhD}
-%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
-%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
-%%=============================================================%%
+%\author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} \dgr{MSc, PhD}}\email{iauthor@gmail.com}
 
-\author*[1]{\fnm{First} \sur{Author}}\email{First@gmail.com}
+\author[1]{\fnm{First} \sur{Author}}\email{iauthor@gmail.com}
 
-\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
-\equalcont{These authors contributed equally to this work.}
+\author[1]{\fnm{ii} \sur{Author}}\email{iiauthor@gmail.com}
 
-\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
-\equalcont{These authors contributed equally to this work.}
+\author[1]{\fnm{iii} \sur{Author}}\email{iiiauthor@gmail.com}
 
-\affil*[1]{\orgdiv{PPGEE}, \orgname{UTFPR}, \orgaddress{\street{Via do Conhecimento}, \city{Pato Branco}, \postcode{85503-390}, \state{PR}, \country{Brasil}}}
+\affil[1]{\orgdiv{Programa de Pós-Graduação em Engenharia Elétrica}, \orgname{Universidade Tecnológica Federal do Paraná}, \orgaddress{\street{Via do Conhecimento}, \city{Pato Branco}, \postcode{85503-390}, \state{PR}, \country{Brasil}}}
 
-\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+\abstract{\lipsum[1-2]}
 
-\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
-
-
-
-\abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
-
-\keywords{keyword1, Keyword2, Keyword3, Keyword4}
-
-%%\pacs[JEL Classification]{D8, H51}
-
-%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+\keywords{SED, Industry 4.0, TCS}
 
 \maketitle
 
+\input{capitulos/introducao.tex}
+%\input{capitulos/revisao_bibliografica.tex}
 \input{capitulos/desenvolvimento.tex}
+\input{capitulos/conclusao.tex}
 
 \bibliography{sn-bibliography}
 
