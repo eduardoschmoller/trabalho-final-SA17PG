@@ -7,3 +7,5 @@ considerações modelagem:
 	
 	
 	- falta considerar colisões nas prensas
+	
+	- alteração para teste
