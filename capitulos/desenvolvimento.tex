@@ -2,7 +2,13 @@
 \subsection{Plantas}
 Robôs 1 e 2
 
-TODO: descrição do funcionamento dos robôs
+Os robôs 1 e 2, possuem comportamentos similares, onde as rotinas de posicionamentos espaciais são projetadas em forma de funções, onde são acionadas através de sinais vindo do CLP (Controlador Lógico Programável). Os movimentos do robô 1 consistem em: 
+1 - Pegar Peça na mesa centralizadora, que na prática é um conjunto de movimentos que levará o robô até a mesa na posição em que as chapas metálicas se encontram, fazer o acionamento das garras (Ventosas) e quando o mesmo identificou que pegou a peça ele começa o movimento de retorno. 
+2 - Retorno da mesa centralizadora, quando o robô esta em uma posição segura ele envia um sinal ao CLP que já pegou a peça e está pronto para o próximo ciclo.
+3 - Inserir a peça na prensa 1. O robô assim que tem uma peça pode inserir a peça na prensa, similar a primeira operação será realizado um bloco de movimentos até chegar na posição espacial da prensa, assim que chegar as garras são desacionadas deixando a peça dentro da prensa. 
+4 - Quando o robô volta a uma posição segura para operação da prensa ele envia sinal ao CLP que pode iniciar o processo da prensa. 
+
+O robô 2 tem o mesmo principio do robô 1, o que diferência é o local que ele remove e insere a peça, ele remove a peça da prensa 1 e insere na prensa 2, sempre retornando a uma posição segura.
 
 \begin{figure}[H]%
   \centering
@@ -25,7 +31,12 @@ TODO: descrição do funcionamento dos robôs
 
 Robôs 3 e 4
 
-TODO: descrição do funcionamento dos robôs
+O robô 3 possui as mesmas rotinas que o robô 2, porém ná prática assim que ela remove uma peça da prensa 2 ele precisa fazer o descarte dos retalhos, essa operação é feita internamente, assim que ele remove a peça da presa ele vai até a posição do descarte e libera as ventosas que seguram os retalhos, após isso vai para posição segura. 
+O robô 4 possui uma rotina diferente, no sentido que ele não insere na prensa 4, ele leva a peça até o robô 5, pois a ultima operação a peça tem que estar invertida, então para isso ser possível é necessário que o robô 4 entregue a peça ao robô 5. Logo o robô 4 possui as seguintes rotinas. 
+1 - Remove peça da prensa 3. 
+2 - Retorna para uma posição segura. 
+3 - Leva peça para o robô 5, onde ele só pode retornar assim que o robô 5 mandar sinal que já pegou a peça. 
+4 - retorno para um ponto seguro após entregar a peça. 
 
 \begin{figure}[H]%
   \centering
@@ -48,7 +59,12 @@ TODO: descrição do funcionamento dos robôs
 
 Robô 5
 
-TODO: descrição do funcionamento do robô
+Como descrito anteriormente o robô 5 pega a peça do robô 4, e ele faz a insereção e remoção na ultima prensa, podemos dividir as rotinas dele em: 
+
+1 - Pegar peça do robô 4, onde o mesmo vai chegar na posição aonde o robô 4 vai largar a peça. 
+2 - Insere a peça na prensa, voltando a uma posição segura para que a prensa possa realizar o trabalho. 
+3 - Retirar a peça depois que a prensa finaliza o trabalho, nessa retirada da peça é feito também a lubrificação da prensa.
+4 - Por final a peça é levada até uma esteira onde é feito o descarte da mesma. 
 
 \begin{figure}[H]%
     \centering
@@ -58,7 +74,14 @@ TODO: descrição do funcionamento do robô
 
 Todas as prensas têm o mesmo modelo, a seguir apresenta-se o modelo genérico para as prensas.
 
-TODO: descrever funcionamento esperado para uma prensa, talvez.
+As prensas funcionam da mesma maneira, tendo um acionador denotado por Bimanual, que quando acionado liga o motor da prensa fazendo com que ela movimente linearmente na vertical, subindo e descendo, a prensa possui alguns sinais internos para identificar o posicionamento sendo eles:
+
+1 - PMS, ponto morto superior, este sinal é enviado quando o martelo da prensa esta na parte superior;
+2 - PMI, ponto morto inferior, este sinal é enviado quando o martelo da prensa esta na parte inferior;
+3 - Bimanual, sinal para acionar o motor da prensa para que ela realize o movimento; 
+
+É considerado um ciclo completo de trabalho quando a prensa passa do PMS -->PMI-->PMS. 
+
 
 \begin{figure}[H]%
     \centering
