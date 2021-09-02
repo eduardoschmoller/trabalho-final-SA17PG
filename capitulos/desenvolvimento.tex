@@ -82,7 +82,7 @@ A Figura \ref{fig:robo5} apresenta o modelo para o processo do robô 5.
 
 \begin{figure}[H]%
     \centering
-    \includegraphics[width=0.9\textwidth]{imagens/robo_5.eps}
+    \includegraphics[width=0.8\textwidth]{imagens/robo_5.eps}
     \caption{Planta robô 5}\label{fig:robo5}
 \end{figure}
 
@@ -96,6 +96,8 @@ As prensas funcionam da mesma maneira, tendo um acionador denotado por Bimanual,
 \end{enumerate}
 
 É considerado um ciclo completo de trabalho quando a prensa passa do $PMS \to PMI \to PMS$. 
+
+A figura \ref{fig:prensa} apresenta o modelo para a prensa.
 
 \begin{figure}[H]%
     \centering
@@ -339,7 +341,7 @@ A Figura \ref{fig:modulare0} apresenta o resultado da análise da modularidade d
 O processo de verificação de modularidade foi executado para todas as especificações, a tabela \ref{tab:modulos} apresenta o resultado para cada especificação e as respectivas plantas com atuação.
 Foi verificado que o número máximo de interações de uma especificações é com duas plantas.
 
-\begin{table}[h]%
+\begin{table}[h!]%
 \begin{center}
 \begin{minipage}{0.5\textwidth}
 \caption{Relações entre plantas e especificações}
@@ -377,7 +379,7 @@ Foi verificado que o número máximo de interações de uma especificações é 
 Utilizando-se da relação entre especificações e plantas foi calculado o supervisor não bloqueante e controlavel modularmente para cada especificação.
 A Tabela \ref{tab:supervisor} apresenta o número de estados, transições e eventos para cada supervisor modular e para o supervisor final.
 
-\begin{table}[h]%
+\begin{table}[h!]%
 \begin{center}
 \begin{minipage}{0.5\textwidth}
 \caption{Supervisores Modulares}
@@ -413,5 +415,3 @@ A Tabela \ref{tab:supervisor} apresenta o número de estados, transições e eve
 \end{minipage}
 \end{center}
 \end{table}
-
-Por limitação computacional não foi possivel realizar a composição de todos os supervisores para obtenção do controlador final, isso se deu devido à explosão do número de estados.
