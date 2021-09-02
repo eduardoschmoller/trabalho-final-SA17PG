@@ -827,7 +827,7 @@
   \global\let\author\relax%
   \global\let\date\relax%
   \global\let\and\relax%
-  \pagestyle{headings}%
+  \pagestyle{plain}%
   %%%print continuous abstract on next page
   \@afterheading%
   %%\vskip-18pt% this is included to avoid vertical space at the beginning of left column on article opening pages
@@ -1497,7 +1497,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\pagestyle{headings}%
+\pagestyle{plain}%
 \pagenumbering{arabic}%
 \sloppy%
 \frenchspacing%

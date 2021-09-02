@@ -1,0 +1,20 @@
+E0 - Só posso retirar peça da mesa quando estiver chapa
+E1 - Quando o Robô 1 estiver com peça ele pode inserir na prensa 1. 
+E3 - Só posso inserir novamente uma peça na Prensa 1, quando o Robô 2 retirou a peça que foi inserida. 
+E7 - Só posso inserir novamente uma peça na Prensa 2, quando o Robô 3 retirou a peça que foi inserida. 
+E11 - Só posso inserir novamente uma peça na Prensa 3, quando o Robô 4 retirou a peça que foi inserida. 
+E4 - Habilita retirada de peça Com Robo 2 quando a prensa 1 finaliza operação.
+E8 - Habilita retirada de peça Com Robo 3 quando a prensa 2 finaliza operação.
+E12 - Habilita retirada de peça Com Robo 4 quando a prensa 3 finaliza operação.
+E15 - Quando finaliza a operaçã na Prensa 4, posso retirar ela com Robô 5. 
+E5 - Quando o Robô 2 estiver com peça ele pode inserir na Prensa 2. 
+E9 - Quando o Robô 3 estiver com peça ele pode inserir na Prensa 3.
+E18 - Quando o Robô 5 retirou a peça do Robô 4 posso inserir na prensa. 
+E13 - Quando o Robô 4 estiver com a peça ele pode levar para o Robô 5.
+E2 - A Prensa 1 só pode iniciar operação quando o Robô 1 inseriu a peça e esta em uma posição segura.
+E6 - A Prensa 2 só pode iniciar operação quando o Robô 2 inseriu a peça e esta em uma posição segura.
+E10 - A Prensa 3 só pode iniciar operação quando o Robô 3 inseriu a peça e esta em uma posição segura. 
+E14 - A Prensa 4 só pode iniciar operação quando o Robô 5 inseriu a peça e já esta em uma posição segura. 
+E16 - Quando o Robô 4 leva a peça para o Robô 5, tenho que esperar o Robô 5 retirar a peça. 
+E17 - Só depois que o Robô 5 ritirou a peça posso retornar o Robô 4. 
+E19 - Só posso pegar uma nova peça no robô 4, quando retornei da esteira 
