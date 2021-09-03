@@ -45,7 +45,7 @@ Os modelos para a planta dos robôs 1 e 2 são apresentados na Figura \ref{fig:r
 
 O robô 3 possui as mesmas rotinas de operações que o robô 2, porém na prática assim que esse retirar uma peça da prensa 2, ele precisará fazer o descarte dos retalhos da peça. Essa operação é feita internamente, então assim que esse retira a peça da prensa 2, vai até a posição do descarte, liberando as ventosas que seguram os retalhos. Após feito o descarte, o robô 3 vai para a posição segura e segue a operação, quando liberado, para inserir a peça na prensa 3. 
 
-O modelo da planta do robô 3 é mostrado na Figura \ref{fig:robo3}, na qual estão identificados os eventos responsáveis pela transição de estados no robô 3. Novamente o evento de interrupção aparece, agora para o robô 3 e é identificado por $Int\_R3$, assim como o evento $Ret\_R3$ de retorno para o estado inicial seguro. Portanto, todos cada um dos robôs irá possuir seu evento de interrupção e retorno para estado inicial seguro.
+O modelo da planta do robô 3 é mostrado na Figura \ref{fig:robo3}, na qual estão identificados os eventos responsáveis pela transição de estados no robô 3. Novamente o evento de interrupção aparece, agora para o robô 3 e é identificado por $Int\_R3$, assim como o evento $Ret\_R3$ de retorno para o estado inicial seguro. Portanto, cada o robô irá possuir seu evento de interrupção e retorno para estado inicial seguro.
 
 O robô 4 possui uma rotina de operação que difere dos robôs anteriores, uma vez que esse não insere peça em uma prensa. O robô em questão leva a peça que retirou até o robô 5, uma vez que na última operação de trabalho sobre a peça, essa deve estar invertida ao ser inserida na prensa 4. Logo, o robô 4 possui as seguintes operações:
 
@@ -150,7 +150,7 @@ A especificação apresentada na figura \ref{fig:e0} direciona o robô 1 a retir
   \label{fig:e01}
 \end{figure}
 
-Na figura \ref{fig:e2} a especificação libera a prensa 1 iniciar a operação (Inicia\_Operacao\_P1) após o robô 1 finalizar a inserção da chapa e ter retornado à uma posição segura (Retorno\_P1). Na especificação apresentada na figura ref{fig:e3} modela a situação de \textit{overflow} da prensa 1, pois libera uma nova inserção (Insere\_Peca\_P1) somente após a retirada da peça pelo robô 2 (Retirou\_peca\_P1).
+Na figura \ref{fig:e2} a especificação libera a prensa 1, inicia a operação (Inicia\_Operacao\_P1) após o robô 1 finalizar a inserção da chapa e ter retornado à uma posição segura (Retorno\_P1). Na especificação apresentada na figura \ref{fig:e3} modela a situação de \textit{overflow} da prensa 1, pois libera uma nova inserção (Insere\_Peca\_P1) somente após a retirada da peça pelo robô 2 (Retirou\_peca\_P1).
 
 \begin{figure}[H]%
   \centering
@@ -319,7 +319,7 @@ A especificação apresentada na figura \ref{fig:e17} força o robô 4 a aguarda
   \label{fig:e1617}
 \end{figure}
 
-A especificação apresentada na figura \ref{fig:e18} limita o robô 5 a iniciar o processo de inserção na prensa 4 (Insere\_Peca\_P4) após ter peça presente na garra (Retirou\_Peca\_R4).A especificação apresentada na \ref{fig:e19} permite que o robô 5 pegue uma nova peça do robô 4 (Retira\_Peca\_R4) após entregar a peça manufaturada na esteira (Retorno\_Esteira).
+A especificação apresentada na figura \ref{fig:e18} limita o robô 5 a iniciar o processo de inserção na prensa 4 (Insere\_Peca\_P4) após ter uma peça presente na garra (Retirou\_Peca\_R4).A especificação apresentada na \ref{fig:e19} permite que o robô 5 pegue uma nova peça do robô 4 (Retira\_Peca\_R4) após entregar a peça manufaturada na esteira (Retorno\_Esteira).
 
 \begin{figure}[H]%
   \centering
@@ -342,7 +342,7 @@ A especificação apresentada na figura \ref{fig:e18} limita o robô 5 a iniciar
 
 \subsection{Solução modular de controle}
 O software Supremica \cite{Supremica2020} disponibiliza a funcionalidade para verificação da modularidade dos modelos desenvolvidos.
-A Figura \ref{fig:modulare0} apresenta o resultado da análise de modularidade para especificação E0 com as plantas, podemos verificar que a especificação realiza controle de eventos sobre o robô 1 e sobre Sensor Chapa sem ter dependência com outras plantas.
+A Figura \ref{fig:modulare0} apresenta o resultado da análise de modularidade para especificação E0 com as plantas, podemos verificar que a especificação realiza controle de eventos sobre o robô 1 e sobre sensor chapa sem ter dependência com outras plantas.
 
 \begin{figure}[H]%
   \centering
